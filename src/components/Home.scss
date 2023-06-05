@@ -1,13 +1,6 @@
-@font-face {
-  font-family: 'Bebas-Neue';
-  src: url('../fonts/BebasNeue-Regular.ttf') format('truetype');
-}
+@import '../styles/fonts';
 
-.skateboarderContainer {
-  height: 800px;
-  width: 300px;
-}
-
+// Text animation
 header {
   display: grid;
   place-content: center;
