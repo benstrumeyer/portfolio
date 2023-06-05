@@ -1,22 +1,37 @@
 import './Greeting.scss';
 
-function Greeting() {
+const greeting = {
+  hello: 'This is',
+  name: 'Ben Strumeyer',
+  title: 'Developer',
+}
+
+const tags = {
+  paragraphOpen: '<p>',
+  paragraphClose: '</p>',
+  h1Open: '<h1>',
+  h1Close: '</h1>',
+}
+
+const Greeting = () => {
+  const { hello, name, title, } = greeting;
+  const { paragraphOpen, paragraphClose, h1Open, h1Close } = tags;
   return (
     <div className='Greeting'>
       <div className='Hello'>
-        <span>&lt;p&gt;</span>
-        <span>This is</span>
-        <span>&lt;/p&gt;</span>
+        <span>{paragraphOpen}</span>
+        <span>{hello}</span>
+        <span>{paragraphClose}</span>
       </div>
       <div className='Name'>
-        <div>&lt;h1&gt;</div>
-        <div>Ben Strumeyer</div> 
-        <div>&lt;h1&gt;</div>
+        <div>{h1Open}</div>
+        <div>{name}</div> 
+        <div>{h1Close}</div>
       </div>
       <div className='Title'>
-        <span>&lt;p&gt;</span>
-        <span>Developer</span>
-        <span>&lt;/p&gt;</span>
+        <span>{paragraphOpen}</span>
+        <span>{title}</span>
+        <span>{paragraphClose}</span>
       </div>
     </div>
   );

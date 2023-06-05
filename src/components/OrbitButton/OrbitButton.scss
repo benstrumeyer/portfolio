@@ -1,0 +1,237 @@
+@import '../../styles/colors';
+
+:root {
+  --moon-animation-delay: 2s;
+  --eclipse-transformation: translateX(100%) translateY(100%);
+  --orbit-speed: 20s;
+  --orbit-radius: 22vh;
+}
+
+@keyframes innerOrbitA {
+  from {
+    transform: rotate(200deg) translateX(calc(var(--orbit-radius) * .78)); 
+  }
+  to {
+    transform: rotate(-160deg) translateX(calc(var(--orbit-radius) * .78));
+  }
+}
+
+@keyframes innerOrbitB {
+  from {
+    transform: rotate(20deg) translateX(calc(var(--orbit-radius) * .78)); 
+  }
+  to {
+    transform: rotate(-340deg) translateX(calc(var(--orbit-radius) * .78));
+  }
+}
+
+@keyframes middleOrbitA {
+  from {
+    transform: rotate(-45deg) translateX(calc(var(--orbit-radius) * .89)); 
+  }
+  to {
+    transform: rotate(315deg) translateX(calc(var(--orbit-radius) * .89));
+  }
+}
+
+@keyframes middleOrbitB {
+  from {
+    transform: rotate(-225deg) translateX(calc(var(--orbit-radius) * .89)); 
+  }
+  to {
+    transform: rotate(135deg) translateX(calc(var(--orbit-radius) * .89));
+  }
+}
+
+
+@keyframes outerOrbitA {
+  from {
+    transform: rotate(240deg) translateX(var(--orbit-radius)); 
+  }
+  to {
+    transform: rotate(-120deg) translateX(var(--orbit-radius));
+  }
+}
+
+@keyframes outerOrbitB {
+  from {
+    transform: rotate(60deg) translateX(var(--orbit-radius)); 
+  }
+  to {
+    transform: rotate(-300deg) translateX(var(--orbit-radius));
+  }
+}
+
+@keyframes eclipse {
+  from {
+    transform: translateX(100%) translateY(100%);
+  }
+  to {
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+@keyframes planetEclipse {
+  from {
+    transform: translateX(100%) translateY(100%);
+  }
+  to {
+    transform: translateX(5%) translateY(5%);
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.loader {
+  position: relative;
+  height: calc(var(--orbit-radius) * 2);
+  width: calc(var(--orbit-radius) * 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: fadeIn;
+  animation-delay: 0s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.loaderFadeOutAnimation {
+  animation: fadeOut 1s linear;
+  animation-fill-mode: forwards;
+}
+
+.planet {
+  position: absolute;
+  width: 68%;
+  height: 68%;
+  filter: contrast(640%) brightness(400%);
+  background: 
+	radial-gradient(circle at 51% 50%, rgba(255,255,255,1), rgba(0,0,0,1)),
+	url("data:image/svg+xml,%3Csvg viewBox='0 0 318 318' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='5.23' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  overflow: hidden;
+}
+
+.planetEclipse {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  transform: translateX(135%) translateY(135%);
+  filter: contrast(130%) brightness(400%) invert(100%);
+  background: 
+	radial-gradient(circle at 51% 50%, rgba(255,255,255,1), rgba(0,0,0,1)),
+  url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='5.23' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  border-radius: 50%;
+}
+  
+.planetAnimation {
+  animation: planetEclipse 4s linear;
+  animation-fill-mode: forwards;
+}
+
+.moonContainer {
+  position: absolute;
+  height: 2vh;
+  width: 2vh;
+  border-radius: 50%;
+  background-color: $dark-grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.moon {
+  height: 1vh;
+  width: 1vh;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+}
+
+.moonEclipse {
+  display: block;
+  content: "";
+  width: 1vh;
+  height: 1vh;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.moonAnimation {
+  animation: eclipse 3s linear;
+  transform: var(--eclipse-transformation);
+  animation-fill-mode: forwards;
+  background-color: black;
+}
+
+.innerMoonA {
+  animation: innerOrbitA var(--orbit-speed) infinite linear;
+  transition-property: all;
+}
+
+.innerMoonB {
+  animation: innerOrbitB var(--orbit-speed) infinite linear;
+  transition-property: all;
+}
+
+
+.middleMoonA {
+  animation: middleOrbitA var(--orbit-speed) infinite linear;
+  transition-property: all;
+}
+
+.middleMoonB {
+  animation: middleOrbitB var(--orbit-speed) infinite linear;
+  transition-property: all;
+}
+
+.outerMoonA {
+  animation: outerOrbitA calc(var(--orbit-speed) * 1.5) infinite linear;
+  transition-property: all;
+}
+
+.outerMoonB {
+  animation: outerOrbitB calc(var(--orbit-speed) * 1.5) infinite linear;
+  transition-property: all;
+}
+
+.ring {
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  outline: 1px solid white;
+}
+
+.ring.inner {
+  height: 78%;
+  width: 78%;
+}
+
+.ring.middle {
+  height: 89%;
+  width: 89%;
+}
+.ring.outer {
+  height: 100%;
+  width: 100%;
+}

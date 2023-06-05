@@ -11,7 +11,7 @@ const menu = [
   }
 ]
 
-function Menu() {
+const Menu = () => {
   return (
     <div className='Menu'>
       {menu.map(item => 
