@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+.Menu {
+    padding-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    
+    div {
+        color: $white;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-family: 'VarelaRound-Regular';
+    }
+}

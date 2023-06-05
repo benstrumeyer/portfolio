@@ -1,9 +1,7 @@
-import { useRef, useEffect } from 'react';
 import './Home.scss';
 
+import { useRef, useEffect } from 'react';
 import SplitType from 'split-type';
-
-import { useLottie } from 'lottie-react';
 import { gsap } from 'gsap';
 
 const Home = () => {
@@ -23,7 +21,6 @@ const Home = () => {
 
   return (
     <div>
-      <h1 ref={greetingRef} id="greeting">Hi, I'm Ben!</h1>
     </div>
   );
 }
