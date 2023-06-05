@@ -1,0 +1,35 @@
+@import '../../styles/colors';
+@import '../../styles/fonts';
+
+.Greeting {
+  margin-top: 6vh;
+}
+
+.Hello, .Title {
+  font-family: 'Orbitron-Bold';
+  letter-spacing: 2px;
+
+  span:nth-child(1), span:nth-child(3) {
+    color: $light-grey;
+  }
+
+  span:nth-child(2) {
+    color: $green;
+  }
+}
+
+.Name {
+  margin: 4vh 2vw;
+  font-family: 'Orbitron-Bold';
+  letter-spacing: 2px;
+
+  div:nth-child(1), div:nth-child(3) {
+    color: $light-grey;
+  }
+  div:nth-child(2) {
+    margin-left: 2vw;
+    width: 350px;
+    font-size: 3em;
+    color: $white;
+  }
+}

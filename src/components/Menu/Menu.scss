@@ -4,11 +4,11 @@
 .Menu {
     padding-top: 5vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     
     div {
         color: $white;
-        font-size: 12px;
+        font-size: 14px;
         letter-spacing: 1px;
         font-family: 'VarelaRound-Regular';
     }
