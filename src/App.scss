@@ -1,5 +1,6 @@
 @import './styles/colors';
 @import '../node_modules/normalize.css/normalize.css';
+@import './styles/breakpoints';
 
 .App {
   background-color: $grey;
@@ -10,7 +11,49 @@
 .main {
   height: 100%;
   width: 100%;
-  padding: 10vh 10vw;
+  padding: 0 8vw;
   box-sizing: border-box;
   background-color: $dark-grey;
+}
+
+.GreetingContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.OrbitButtonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.OrbitButtonContainer2 {
+  height: 50%;
+}
+
+.content {
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: auto;
+}
+
+// Desktop
+@media (min-width: 1024px) {
+  .main {
+    padding: 4vh 10vw;
+  }
+  .content {
+    height: 66vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .GreetingContainer {
+    width: 50%;
+    height: auto;
+  }
 }

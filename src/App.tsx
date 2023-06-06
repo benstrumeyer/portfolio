@@ -8,8 +8,16 @@ const App = () => {
     <div className='App'>
       <div className='main'>
         <Menu></Menu>
-        <Greeting></Greeting>
-        <OrbitButton></OrbitButton>
+        <div className='content'>
+          <div className='GreetingContainer'>
+            <Greeting></Greeting>
+          </div>
+          <div className='OrbitButtonContainer'>
+            <div className='OrbitButtonContainer2'>
+              <OrbitButton></OrbitButton>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
