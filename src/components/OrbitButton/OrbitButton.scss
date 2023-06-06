@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/fonts';
 
 :root {
   --moon-animation-delay: 2s;
@@ -100,6 +101,44 @@
   }
 }
 
+.hovered {
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: $green;
+  animation: fillCircle 1s ease;
+  color: $black;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: center;
+}
+
+@keyframes fillCircle {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes unfillCircle {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
 .loader {
   position: relative;
   height: calc(var(--orbit-radius) * 2);
@@ -118,29 +157,25 @@
   animation-fill-mode: forwards;
 }
 
-.planet {
+.button {
   position: absolute;
-  width: 68%;
-  height: 68%;
-  filter: contrast(640%) brightness(400%);
-  background: 
-	radial-gradient(circle at 51% 50%, rgba(255,255,255,1), rgba(0,0,0,1)),
-	url("data:image/svg+xml,%3Csvg viewBox='0 0 318 318' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='5.23' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   overflow: hidden;
+  color: $green;
+  font-family: 'VarelaRound-Regular';
+  letter-spacing: 1px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.buttonHovered {
+    color: $black;
+  }
 }
 
-.planetEclipse {
-  width: 90%;
-  height: 90%;
-  position: absolute;
-  transform: translateX(135%) translateY(135%);
-  filter: contrast(130%) brightness(400%) invert(100%);
-  background: 
-	radial-gradient(circle at 51% 50%, rgba(255,255,255,1), rgba(0,0,0,1)),
-  url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='5.23' numOctaves='6' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  border-radius: 50%;
-}
-  
 .planetAnimation {
   animation: planetEclipse 4s linear;
   animation-fill-mode: forwards;
@@ -223,6 +258,7 @@
 }
 
 .ring.inner {
+  z-index: 3;
   height: 78%;
   width: 78%;
 }

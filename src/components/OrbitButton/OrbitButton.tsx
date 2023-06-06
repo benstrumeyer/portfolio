@@ -1,6 +1,13 @@
 import './OrbitButton.scss';
 
+import { useState } from 'react'; 
+
+const tags = {
+  callToAction: '<Download CV/>',
+}
+
 const OrbitButton = () => {
+  const { callToAction } = tags;
   // const eclipse = document.querySelector(".planetEclipse")!;
   // const moons = document.querySelectorAll(".moonEclipse");
   // const background = document.querySelector(".background")!;
@@ -19,13 +26,21 @@ const OrbitButton = () => {
   //   }, 5500);
 
   // }
+  const [isMouseOver, setIsMouseOver] = useState(false);
+  const onMouseEnter = () => setIsMouseOver(true);
+  const onMouseLeave = () => setIsMouseOver(false);
 
   return (
-    <div className="loader">
-      <div className="planet">
-        <div className="planetEclipse"></div>
+    <div className='loader'>
+      <div className="ring inner"
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}>
+        <div className={`${isMouseOver ? 'hovered' : ''} `}>
+          <div className={`button ${isMouseOver ? 'buttonHovered' : ''}`}>
+            {callToAction}
+          </div>
+        </div>
       </div>
-      <div className="ring inner"></div>
       <div className="ring middle"></div>
       <div className="ring outer"></div>
       <div className="innerMoonA moonContainer">
