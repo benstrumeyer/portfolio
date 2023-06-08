@@ -13,11 +13,7 @@ const App = () => {
           <div className='GreetingContainer'>
             <Greeting></Greeting>
           </div>
-          <div className='OrbitButtonContainer'>
-            <div className='OrbitButtonContainer2'>
-              <OrbitButtonComponent></OrbitButtonComponent>
-            </div>
-          </div>
+          <OrbitButtonComponent></OrbitButtonComponent>
         </div>
         <div className='ButtonContainer'>
           <Button size='large'>Instagram</Button>
