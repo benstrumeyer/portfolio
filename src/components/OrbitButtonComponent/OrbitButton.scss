@@ -1,29 +1,23 @@
 @import '../../styles/colors';
 
 $spacing: 50%;
-$border: 2px;
-$hover-size: $spacing * 2;
+$hover-size: 100%;
 $hover-margin: -50%;
 
-.Button {
+.OrbitButton {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $dark-grey;
-  color: $white;
+  color: $dark-grey;
   display: block;
   height: $spacing * 2;
   position: relative;
   text-decoration: none;
   width: $spacing * 2;
   border-radius: 50%;
-  border: 2px solid $green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
-
 
   .inner {
     background-color: $dark-grey;
@@ -39,8 +33,9 @@ $hover-margin: -50%;
     z-index: 1;
   }
 
+
   &:hover {
-    .buttonText {
+    .text {
       color: $black;
       z-index: 2;
     }

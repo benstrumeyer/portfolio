@@ -1,45 +1,19 @@
-import './OrbitButton.scss';
-
-import { useState } from 'react'; 
+import OrbitButton from './OrbitButton';
+import './OrbitButtonComponent.scss';
 
 const tags = {
   callToAction: '<Download CV/>',
 }
 
-const OrbitButton = () => {
+const OrbitButtonComponent = () => {
   const { callToAction } = tags;
-  // const eclipse = document.querySelector(".planetEclipse")!;
-  // const moons = document.querySelectorAll(".moonEclipse");
-  // const background = document.querySelector(".background")!;
-
-  // function animate() {
-  //   eclipse.classList.add("planetAnimation");
-
-  //   setTimeout(() => {
-  //     moons.forEach(moon => {
-  //       moon.classList.add("moonAnimation");
-  //     })
-  //   }, 3000);
-
-  //   setTimeout(() => {
-  //     background.classList.add("loaderFadeOutAnimation");
-  //   }, 5500);
-
-  // }
-  const [isMouseOver, setIsMouseOver] = useState(false);
-  const onMouseEnter = () => setIsMouseOver(true);
-  const onMouseLeave = () => setIsMouseOver(false);
 
   return (
     <div className='loader'>
-      <div className="ring inner"
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}>
-        <div className={`${isMouseOver ? 'hovered' : ''} `}>
-          <div className={`OrbitButton ${isMouseOver ? 'buttonHovered' : ''}`}>
-            {callToAction}
-          </div>
-        </div>
+      <div className="ring inner">
+        <OrbitButton>
+          {callToAction}
+        </OrbitButton>
       </div>
       <div className="ring middle"></div>
       <div className="ring outer"></div>
@@ -77,4 +51,4 @@ const OrbitButton = () => {
   );
 }
 
-export default OrbitButton;
+export default OrbitButtonComponent;
