@@ -24,8 +24,24 @@ $hover-margin: -50%;
   align-items: center;
   cursor: pointer;
 
+  .content {
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VarelaRound-Regular';
 
-  .inner {
+    div {
+      margin: 2px 0;
+      z-index: 2;
+      color: $white;
+    }
+  }
+
+  .background {
     background-color: $dark-grey;
     display: block;
     height: 0;
@@ -39,18 +55,20 @@ $hover-margin: -50%;
     z-index: 1;
   }
 
-  &:hover {
-    .buttonText {
-      color: $black;
-      z-index: 2;
-    }
+  &:hover .background {
+    height: $hover-size;
+    margin-left: $hover-margin;
+    margin-top: $hover-margin;
+    width: $hover-size;
+    background-color: $green;
+    z-index: 0;
+  }
 
-    .inner {
-      height: $hover-size;
-      margin-left: $hover-margin;
-      margin-top: $hover-margin;
-      width: $hover-size;
-      background-color: $green;
-    }
+  &:hover .content div {
+    color: $black;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s;
   }
 }
+

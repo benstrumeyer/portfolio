@@ -20,10 +20,10 @@ const App = () => {
           </div>
         </div>
         <div className='ButtonContainer'>
-          <Button>Instagram</Button>
-          <Button>LinkedIn</Button>
-          <Button>Github</Button>
-          <Button>Email</Button>
+          <Button size='large'>Instagram</Button>
+          <Button size='large'>LinkedIn</Button>
+          <Button size='small'>Github</Button>
+          <Button size='medium'>Email</Button>
         </div>
       </div>
     </div>

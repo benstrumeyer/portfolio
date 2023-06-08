@@ -1,15 +1,26 @@
 import './Button.scss';
 
 interface ButtonProps {
+  size: 'small' | 'medium' | 'large';
   children: React.ReactNode;
 }
 
+const tags = {
+  fragmentOpen: '<>',
+  fragmentClose: '</>',
+}
+
 const Button = (props: ButtonProps) => {
-  const { children } = props;
+  const { size, children } = props;
+  const { fragmentOpen, fragmentClose } = tags;
   return (
     <a className='Button'>
-      <span className='buttonText'>{children}</span>
-      <span className="inner"></span>
+      <div className='content'>
+        <div>{fragmentOpen}</div>
+        <div className='text'>{children}</div>
+        <div>{fragmentClose}</div>
+      </div>
+      <div className="background"></div>
     </a>
   );
 };
