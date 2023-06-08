@@ -1,0 +1,63 @@
+@import '../../styles/colors';
+
+
+$spacing: 40px;
+$border: 2px;
+
+$hover-size: $spacing * 2 - $border * 2;
+$hover-margin: -38px;
+
+.Button {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  background-color: $white;
+  color: $dark-grey;
+  display: block;
+  height: $spacing * 2;
+  position: relative;
+  text-decoration: none;
+  width: $spacing * 2;
+  
+  border-radius: 50%;
+
+  i {
+    position: relative;
+    z-index: 1;
+  }
+
+  .inner {
+    background-color: $dark-grey;
+    display: block;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 0;
+
+    border-radius: 50%;
+    transition: background-color 0.1s, height 0.1s, width 0.1s, margin 0.1s;
+    z-index: 1;
+  }
+
+ 
+  &:hover {
+    .buttonText {
+      color: $white;
+      z-index: 2;
+    }
+
+    .inner {
+      height: $hover-size;
+      margin-left: $hover-margin;
+      margin-top: $hover-margin;
+      width: $hover-size;
+      background-color: $green;
+    }
+  }
+}

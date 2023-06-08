@@ -36,7 +36,7 @@ const OrbitButton = () => {
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}>
         <div className={`${isMouseOver ? 'hovered' : ''} `}>
-          <div className={`button ${isMouseOver ? 'buttonHovered' : ''}`}>
+          <div className={`OrbitButton ${isMouseOver ? 'buttonHovered' : ''}`}>
             {callToAction}
           </div>
         </div>
