@@ -20,12 +20,17 @@
   display: flex;
   justify-content: center;
   width: 100%;
+
+  .Greeting {
+    margin-left: 14vw;
+  }
 }
 
 .content {
   height: 90vh;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-direction: column;
   margin: auto;
 }
@@ -46,6 +51,10 @@
   .GreetingContainer {
     width: 50%;
     height: auto;
+
+    .Greeting {
+      margin: 0;
+    }
   }
 }
 
