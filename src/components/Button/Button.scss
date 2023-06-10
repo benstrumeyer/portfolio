@@ -13,10 +13,10 @@ $hover-margin: -50%;
   background-color: $dark-grey;
   color: $white;
   display: block;
-  height: $spacing * 2;
+  height: 15vh;
+  width: 15vh;
   position: relative;
   text-decoration: none;
-  width: $spacing * 2;
   border-radius: 50%;
   border: 2px solid $green;
   display: flex;
@@ -32,10 +32,12 @@ $hover-margin: -50%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'VarelaRound-Regular';
+    font-family: 'Orbitron';
+    letter-spacing: 1px;
+    font-size: 1.1em;
 
     div {
-      margin: 2px 0;
+      margin: 3px 0;
       z-index: 2;
       color: $white;
     }
@@ -72,3 +74,32 @@ $hover-margin: -50%;
   }
 }
 
+@media (min-width: 1024px) {
+  .Button .content > div {
+    margin: 5px 0;
+  }
+  .Button:nth-child(1) {
+    margin: -23vh -5% 0 0;
+    height: 25vh;
+    width: 25vh;
+  }
+
+  .Button:nth-child(2) {
+    margin-top: 20vh;
+    height: 22vh;
+    width: 22vh;
+  }
+
+  .Button:nth-child(3) {
+    margin: -40vh 0 0 -10%;
+    height: 25vh;
+    width: 25vh;
+  }
+
+  .Button:nth-child(4) {
+    margin-top: 0;
+    margin-left: -4%;
+    height: 23vh;
+    width: 23vh;
+  }
+}

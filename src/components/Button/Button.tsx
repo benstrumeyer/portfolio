@@ -1,7 +1,6 @@
 import './Button.scss';
 
 interface ButtonProps {
-  size: 'small' | 'medium' | 'large';
   children: React.ReactNode;
 }
 
@@ -11,7 +10,7 @@ const tags = {
 }
 
 const Button = (props: ButtonProps) => {
-  const { size, children } = props;
+  const { children } = props;
   const { fragmentOpen, fragmentClose } = tags;
   return (
     <a className='Button'>

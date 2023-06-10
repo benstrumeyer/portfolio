@@ -15,11 +15,14 @@ const App = () => {
           </div>
           <OrbitButtonComponent></OrbitButtonComponent>
         </div>
-        <div className='ButtonContainer'>
-          <Button size='large'>Instagram</Button>
-          <Button size='large'>LinkedIn</Button>
-          <Button size='small'>Github</Button>
-          <Button size='medium'>Email</Button>
+        <div className='Contact'>
+          <div className='Title'>Connect with me</div>
+          <div className='ButtonContainer'>
+            <Button>Email</Button>
+            <Button>Github</Button>
+            <Button>LinkedIn</Button>
+            <Button>Instagram</Button>
+          </div>
         </div>
       </div>
     </div>

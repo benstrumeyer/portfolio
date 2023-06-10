@@ -6,7 +6,7 @@ const menu = [
     link: '/home',
   },
   {
-    title: '//01.  <Contact\/\>',
+    title: '//02.  <Contact\/\>',
     link: '/contact',
   }
 ]
