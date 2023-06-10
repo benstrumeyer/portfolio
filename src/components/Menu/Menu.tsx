@@ -2,11 +2,11 @@ import './Menu.scss';
 
 const menu = [
   {
-    title: '//01.  <Home\/\>',
+    title: '<Home\/\>',
     link: '/home',
   },
   {
-    title: '//02.  <Contact\/\>',
+    title: '<Contact\/\>',
     link: '/contact',
   }
 ]
@@ -14,8 +14,12 @@ const menu = [
 const Menu = () => {
   return (
     <div className='Menu'>
-      {menu.map(item => 
-        <div>{item.title}</div>)}
+      {menu.map((item, index) => (
+        <div>
+          <div className='Index'>//0{index}.</div>
+          <div>{item.title}</div>
+        </div>)
+      )}
     </div>
   );
 }
