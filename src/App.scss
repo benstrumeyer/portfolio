@@ -8,7 +8,7 @@
   padding: 5vh 6vw;
 }
 
-.main {
+.Main {
   height: 100%;
   width: 100%;
   padding: 0 8vw;
@@ -41,14 +41,14 @@
     padding: 4vh 10vw;
   }
   .content {
-    height: 66vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
-    align-items: center;
   }
 
   .GreetingContainer {
+    margin-top: -10vh;
     width: 50%;
     height: auto;
 

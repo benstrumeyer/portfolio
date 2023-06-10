@@ -1,10 +1,6 @@
 @import '../../styles/colors';
 @import '../../styles/fonts';
 
-.Greeting {
-  // margin-top: 6vh;
-}
-
 .Hello, .Title {
   font-family: 'Orbitron-Bold';
   letter-spacing: 2px;
@@ -31,5 +27,15 @@
     width: 350px;
     font-size: 3em;
     color: $white;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Hello, .Title {
+    font-size: 1em;
+  }
+
+  .Name > div:nth-child(2) {
+    font-size: 2.8em;
   }
 }

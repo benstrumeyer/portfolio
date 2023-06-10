@@ -152,6 +152,7 @@
 }
 
 .loader {
+  margin-top: -10vh;
   position: relative;
   height: calc(var(--orbit-radius) * 2);
   width: calc(var(--orbit-radius) * 2);
@@ -162,6 +163,12 @@
   animation-delay: 0s;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+}
+
+@media (min-width: 1024px) {
+  .loader {
+    margin-top: -10vh;
+  }
 }
 
 .loaderFadeOutAnimation {

@@ -7,7 +7,7 @@ import Button from './components/Button/Button';
 const App = () => {
   return (
     <div className='App'>
-      <div className='main'>
+      <div className='Main'>
         <Menu></Menu>
         <div className='content'>
           <div className='GreetingContainer'>
