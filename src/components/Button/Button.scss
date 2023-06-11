@@ -23,7 +23,6 @@ $hover-margin: -50%;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  // scale: 0;
 
   .content {
     height: 100%;
@@ -79,6 +78,7 @@ $hover-margin: -50%;
   .Button .content > div {
     margin: 5px 0;
   }
+
   .Button:nth-child(1) {
     margin: -23vh -5% 0 0;
     height: 25vh;

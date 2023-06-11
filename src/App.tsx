@@ -15,16 +15,28 @@ const tags = {
 
 const App = () => {
   const { h4Open, h4Close } = tags;
-  const buttonContainerRef = useRef<HTMLDivElement | null>(null)
-  const entry = useIntersectionObserver(buttonContainerRef, {})
-  const isVisible = !!entry?.isIntersecting
-  
+  const buttonsRef = useRef<HTMLDivElement | null>(null)!;
+  const buttonsEntry = useIntersectionObserver(buttonsRef, {});
+  const isButtonsVisible = !!buttonsEntry?.isIntersecting;
   const [seenOnce, setSeenOnce] = useState(false);
 
+  const resumeRef = useRef<HTMLDivElement | null>(null)!;
+
+  // Resume button animation
   useEffect(() => {
-    if (isVisible && buttonContainerRef.current && !seenOnce) {
+    gsap.fromTo(
+      resumeRef.current,
+      { scale: 0, opacity: 0, duration: 0.85 },
+      { scale: 1, opacity: 1, duration: 1, ease: "power2.out" }
+    );
+  }, []);
+
+
+  // Contact section button animation
+  useEffect(() => {
+    if (isButtonsVisible && buttonsRef.current && !seenOnce) {
       setSeenOnce(true);
-      const buttons = buttonContainerRef.current.querySelectorAll('.Button');
+      const buttons = buttonsRef.current.querySelectorAll('.Button');
       gsap.set(buttons, { scale: 0 });
 
       const tl = gsap.timeline();
@@ -43,7 +55,7 @@ const App = () => {
       });
     }
 
-  }, [isVisible, seenOnce])
+  }, [isButtonsVisible, seenOnce])
 
   return (
     <div className='App'>
@@ -53,7 +65,9 @@ const App = () => {
           <div className='GreetingContainer'>
             <Greeting></Greeting>
           </div>
-          <OrbitButtonComponent></OrbitButtonComponent>
+          <div ref={resumeRef}>
+            <OrbitButtonComponent></OrbitButtonComponent>
+          </div>
         </div>
         <div className='Contact'>
           <div className='TitleContainer'>
@@ -61,7 +75,7 @@ const App = () => {
             <div className='Title'>Connect with me</div>
             <div className='Tag'>{h4Close}</div>
           </div>
-          <div ref={buttonContainerRef} className='ButtonContainer'>
+          <div ref={buttonsRef} className='ButtonContainer'>
             <Button>Email</Button>
             <Button>Github</Button>
             <Button>LinkedIn</Button>

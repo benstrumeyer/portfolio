@@ -89,28 +89,6 @@
   }
 }
 
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
 .hovered {
   content: '';
   top: 50%;
@@ -159,21 +137,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation-name: fadeIn;
-  animation-delay: 0s;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
 }
 
 @media (min-width: 1200px) {
   .loader {
     margin-top: -10vh;
   }
-}
-
-.loaderFadeOutAnimation {
-  animation: fadeOut 1s linear;
-  animation-fill-mode: forwards;
 }
 
 .planetAnimation {

@@ -1,6 +1,7 @@
 import OrbitButton from './OrbitButton';
 import './OrbitButtonComponent.scss';
 
+import { RefObject } from 'react';
 const tags = {
   callToAction: '<Download CV/>',
 }
