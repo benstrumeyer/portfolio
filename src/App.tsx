@@ -43,7 +43,6 @@ const App = () => {
     )
   }, [])
 
-
   // Contact section button animation
   useEffect(() => {
     if (isButtonsVisible && buttonsRef.current && !seenOnce) {
