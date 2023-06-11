@@ -27,15 +27,16 @@
 }
 
 .content {
-  height: 90vh;
+  height: 71vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  margin: auto;
+  margin: 1vh;
 }
 
 .Contact {
+  padding-top: 2vh;
   height: 100vh;
   width: 100%;
   text-align: center;
@@ -85,14 +86,13 @@
   }
 
   .content {
-    height: 90vh;
+    height: 71vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
   }
 
   .GreetingContainer {
-    margin-top: -10vh;
     width: 50%;
     height: auto;
 
@@ -101,23 +101,19 @@
     }
   }
 
-  .Contact .ButtonContainer {
+  .Contact {
+    padding-top: 10vh;
+
+    .ButtonContainer {
+
     flex-direction: row;
     width: 90%;
     margin: auto;
     flex-shrink: 0;
-  }
-
-  .Contact .TitleContainer .Tag {
-    color: $light-grey;
-    display: block;
-
-    &:nth-of-type(1) {
-      margin: -20px -24px 0 0;
     }
 
-    &:nth-of-type(3) {
-      margin: 57px 0 0 -16px;
+    .TitleContainer .Tag {
+        padding-top: 10vh; 
     }
   }
 }

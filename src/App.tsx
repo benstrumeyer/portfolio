@@ -4,9 +4,10 @@ import Greeting from './components/Greeting/Greeting';
 import OrbitButtonComponent from './components/OrbitButtonComponent/OrbitButtonComponent';
 import Button from './components/Button/Button';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
+import Arrow from './components/Arrow/Arrow';
 
 import { useState, useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import gsap from 'gsap'; 
 
 const tags = {
   h4Open: '<h4>',
@@ -22,6 +23,10 @@ const App = () => {
 
   const resumeRef = useRef<HTMLDivElement | null>(null)!;
 
+  const arrowRef = useRef<HTMLDivElement | null>(null)!;
+
+  const contactRef = useRef<HTMLDivElement | null>(null)!;
+
   // Resume button animation
   useEffect(() => {
     gsap.fromTo(
@@ -30,6 +35,14 @@ const App = () => {
       { scale: 1, opacity: 1, duration: 1, ease: "power2.out" }
     );
   }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      arrowRef.current,
+      { opacity: 0 },
+      { opacity: 1, delay: .85, duration: .85 }
+    )
+  }, [])
 
 
   // Contact section button animation
@@ -69,7 +82,10 @@ const App = () => {
             <OrbitButtonComponent></OrbitButtonComponent>
           </div>
         </div>
-        <div className='Contact'>
+        <div ref={arrowRef}>
+          <Arrow contactRef={contactRef}></Arrow>
+        </div>
+        <div ref={contactRef} className='Contact'>
           <div className='TitleContainer'>
             <div className='Tag'>{h4Open}</div>
             <div className='Title'>Connect with me</div>

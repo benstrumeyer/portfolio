@@ -5,7 +5,13 @@
   --moon-animation-delay: 2s;
   --eclipse-transformation: translateX(100%) translateY(100%);
   --orbit-speed: 20s;
-  --orbit-radius: 17vh;
+  --orbit-radius: 14vh;
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --orbit-radius: 17vh;
+  }
 }
 
 @keyframes innerOrbitA {
@@ -130,7 +136,6 @@
 }
 
 .loader {
-  margin-top: -10vh;
   position: relative;
   height: calc(var(--orbit-radius) * 2);
   width: calc(var(--orbit-radius) * 2);
@@ -140,9 +145,7 @@
 }
 
 @media (min-width: 1200px) {
-  .loader {
-    margin-top: -10vh;
-  }
+
 }
 
 .planetAnimation {
