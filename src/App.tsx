@@ -3,6 +3,10 @@ import Menu from './components/Menu/Menu';
 import Greeting from './components/Greeting/Greeting';
 import OrbitButtonComponent from './components/OrbitButtonComponent/OrbitButtonComponent';
 import Button from './components/Button/Button';
+import { useIntersectionObserver } from './hooks/useIntersectionObserver';
+
+import  { useRef, useEffect } from 'react';
+import gsap from 'gsap';
 
 const tags = {
   h4Open: '<h4>',
@@ -11,6 +15,32 @@ const tags = {
 
 const App = () => {
   const { h4Open, h4Close } = tags;
+  const buttonContainerRef = useRef<HTMLDivElement | null>(null)
+  const entry = useIntersectionObserver(buttonContainerRef, {})
+  const isVisible = !!entry?.isIntersecting
+
+  useEffect(() => {
+    if (isVisible && buttonContainerRef.current) {
+    const buttons = buttonContainerRef.current.querySelectorAll('.Button');
+    gsap.set(buttons, { scale: 0 });
+
+    const tl = gsap.timeline();
+
+    tl.to(buttons, { 
+      scale: 1, 
+      duration: 0.85, 
+      onComplete: () => {
+        tl.to(buttons, { 
+          scale: 0.95, 
+          duration: .7, 
+          repeat: -1, 
+          yoyo: true
+        });
+    } });
+  }
+
+  }, [isVisible])
+  
   return (
     <div className='App'>
       <div className='Main'>
@@ -27,7 +57,7 @@ const App = () => {
             <div className='Title'>Connect with me</div>
             <div className='Tag'>{h4Close}</div>
           </div>
-          <div className='ButtonContainer'>
+          <div ref={buttonContainerRef} className='ButtonContainer'>
             <Button>Email</Button>
             <Button>Github</Button>
             <Button>LinkedIn</Button>
