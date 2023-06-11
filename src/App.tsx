@@ -5,7 +5,7 @@ import OrbitButtonComponent from './components/OrbitButtonComponent/OrbitButtonC
 import Button from './components/Button/Button';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
 
-import  { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import gsap from 'gsap';
 
 const tags = {
@@ -18,29 +18,33 @@ const App = () => {
   const buttonContainerRef = useRef<HTMLDivElement | null>(null)
   const entry = useIntersectionObserver(buttonContainerRef, {})
   const isVisible = !!entry?.isIntersecting
+  
+  const [seenOnce, setSeenOnce] = useState(false);
 
   useEffect(() => {
-    if (isVisible && buttonContainerRef.current) {
-    const buttons = buttonContainerRef.current.querySelectorAll('.Button');
-    gsap.set(buttons, { scale: 0 });
+    if (isVisible && buttonContainerRef.current && !seenOnce) {
+      setSeenOnce(true);
+      const buttons = buttonContainerRef.current.querySelectorAll('.Button');
+      gsap.set(buttons, { scale: 0 });
 
-    const tl = gsap.timeline();
+      const tl = gsap.timeline();
 
-    tl.to(buttons, { 
-      scale: 1, 
-      duration: 0.85, 
-      onComplete: () => {
-        tl.to(buttons, { 
-          scale: 0.95, 
-          duration: .7, 
-          repeat: -1, 
-          yoyo: true
-        });
-    } });
-  }
+      tl.to(buttons, {
+        scale: 1,
+        duration: 0.85,
+        onComplete: () => {
+          tl.to(buttons, {
+            scale: 0.95,
+            duration: .7,
+            repeat: -1,
+            yoyo: true
+          });
+        }
+      });
+    }
 
-  }, [isVisible])
-  
+  }, [isVisible, seenOnce])
+
   return (
     <div className='App'>
       <div className='Main'>
