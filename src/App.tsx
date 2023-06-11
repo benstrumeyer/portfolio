@@ -4,7 +4,13 @@ import Greeting from './components/Greeting/Greeting';
 import OrbitButtonComponent from './components/OrbitButtonComponent/OrbitButtonComponent';
 import Button from './components/Button/Button';
 
+const tags = {
+  h4Open: '<h4>',
+  h4Close: '</h4>',
+}
+
 const App = () => {
+  const { h4Open, h4Close } = tags;
   return (
     <div className='App'>
       <div className='Main'>
@@ -16,7 +22,11 @@ const App = () => {
           <OrbitButtonComponent></OrbitButtonComponent>
         </div>
         <div className='Contact'>
-          <div className='Title'>Connect with me</div>
+          <div className='TitleContainer'>
+            <div className='Tag'>{h4Open}</div>
+            <div className='Title'>Connect with me</div>
+            <div className='Tag'>{h4Close}</div>
+          </div>
           <div className='ButtonContainer'>
             <Button>Email</Button>
             <Button>Github</Button>

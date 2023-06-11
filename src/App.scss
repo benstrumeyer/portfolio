@@ -38,13 +38,36 @@
 .Contact {
   height: 100vh;
   width: 100%;
+  text-align: center;
+
+  .TitleContainer {
+    margin: 5vh 0;
+    display: flex;
+    justify-content: center;
+    font-family: 'Orbitron-Bold';
+    letter-spacing: 1px;
+
+    .Tag {
+      display: none;
+    }
+  }
 
   .Title {
-    margin: 5vh 0;
     text-align: center;
-    font-family: 'Orbitron-Bold';
     font-size: 3em;
     color: $white;
+  }
+
+  .Tag {
+    color: $light-grey;
+
+    &:nth-of-type(1) {
+      margin: -20px -24px 0 0;
+    }
+
+    &:nth-of-type(3) {
+      margin: 57px 0 0 -16px;
+    }
   }
 
   .ButtonContainer {
@@ -53,17 +76,14 @@
     justify-content: space-around;
     align-items: center;
     height: 70vh;
-
-    // .div:nth-of-type(even) {
-    //   margin-left: 10px;
-    // }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .main {
     padding: 4vh 10vw;
   }
+
   .content {
     height: 90vh;
     display: flex;
@@ -86,5 +106,18 @@
     width: 90%;
     margin: auto;
     flex-shrink: 0;
+  }
+
+  .Contact .TitleContainer .Tag {
+    color: $light-grey;
+    display: block;
+
+    &:nth-of-type(1) {
+      margin: -20px -24px 0 0;
+    }
+
+    &:nth-of-type(3) {
+      margin: 57px 0 0 -16px;
+    }
   }
 }
