@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/benstrumeyer.github.io/static/css/main.fbe1282c.css",
+    "main.css": "/benstrumeyer.github.io/static/css/main.7ca7daee.css",
     "main.js": "/benstrumeyer.github.io/static/js/main.e99355f0.js",
     "static/media/VarelaRound-Regular.ttf": "/benstrumeyer.github.io/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
     "static/media/BebasNeue-Regular.ttf": "/benstrumeyer.github.io/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "static/media/Orbitron-Regular.ttf": "/benstrumeyer.github.io/static/media/Orbitron-Regular.1f498717ba081693370a.ttf",
     "static/media/Orbitron-Bold.ttf": "/benstrumeyer.github.io/static/media/Orbitron-Bold.a0309d1fe75d16b6f13a.ttf",
     "index.html": "/benstrumeyer.github.io/index.html",
-    "main.fbe1282c.css.map": "/benstrumeyer.github.io/static/css/main.fbe1282c.css.map",
+    "main.7ca7daee.css.map": "/benstrumeyer.github.io/static/css/main.7ca7daee.css.map",
     "main.e99355f0.js.map": "/benstrumeyer.github.io/static/js/main.e99355f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbe1282c.css",
+    "static/css/main.7ca7daee.css",
     "static/js/main.e99355f0.js"
   ]
 }
