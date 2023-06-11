@@ -19,7 +19,6 @@ const Arrow = (props: ArrowProps) => {
     }
   };
 
-
   useEffect(() => {
     let timeoutId: NodeJS.Timeout | null = null;
     timeoutId = setTimeout(() => {

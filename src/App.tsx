@@ -22,10 +22,9 @@ const App = () => {
   const [seenOnce, setSeenOnce] = useState(false);
 
   const resumeRef = useRef<HTMLDivElement | null>(null)!;
-
   const arrowRef = useRef<HTMLDivElement | null>(null)!;
-
   const contactRef = useRef<HTMLDivElement | null>(null)!;
+  const homeRef = useRef<HTMLDivElement | null>(null)!;
 
   // Resume button animation
   useEffect(() => {
@@ -68,12 +67,12 @@ const App = () => {
       });
     }
 
-  }, [isButtonsVisible, seenOnce])
+  }, [isButtonsVisible, seenOnce]);
 
   return (
-    <div className='App'>
+    <div ref={homeRef} className='App'>
       <div className='Main'>
-        <Menu></Menu>
+        <Menu homeRef={homeRef} contactRef={contactRef}></Menu>
         <div className='content'>
           <div className='GreetingContainer'>
             <Greeting></Greeting>
