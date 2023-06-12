@@ -14,8 +14,18 @@ const tags = {
   h4Close: '</h4>',
 }
 
+const urls = {
+  email: 'ben.strumeyer@gmail.com',
+  github: 'https://github.com/benstrumeyer',
+  instagram: 'https://instagram.com/ben_strumeyer',
+  linkedIn: 'https://www.linkedin.com/in/ben-strumeyer-8aa897113/',
+}
+
 const App = () => {
   const { h4Open, h4Close } = tags;
+  const { email, github, instagram, linkedIn } = urls;
+
+  // Button animation for contact section
   const buttonsRef = useRef<HTMLDivElement | null>(null)!;
   const buttonsEntry = useIntersectionObserver(buttonsRef, {});
   const isButtonsVisible = !!buttonsEntry?.isIntersecting;
@@ -26,7 +36,7 @@ const App = () => {
   const contactRef = useRef<HTMLDivElement | null>(null)!;
   const homeRef = useRef<HTMLDivElement | null>(null)!;
 
-  // Resume button animation
+  // Button animation for Download CV
   useEffect(() => {
     gsap.fromTo(
       resumeRef.current,
@@ -34,6 +44,8 @@ const App = () => {
       { scale: 1, opacity: 1, duration: 1, ease: "power2.out" }
     );
   }, []);
+
+  // Button animation for arrow
 
   useEffect(() => {
     gsap.fromTo(
@@ -90,10 +102,10 @@ const App = () => {
             <div className='Tag'>{h4Close}</div>
           </div>
           <div ref={buttonsRef} className='ButtonContainer'>
-            <Button>Email</Button>
-            <Button>Github</Button>
-            <Button>LinkedIn</Button>
-            <Button>Instagram</Button>
+            <Button href={`mailto:${email}`}>Email</Button>
+            <Button href={github}>Github</Button>
+            <Button href={linkedIn}>LinkedIn</Button>
+            <Button href={instagram}>Instagram</Button>
           </div>
         </div>
       </div>

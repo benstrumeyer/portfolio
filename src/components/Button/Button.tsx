@@ -1,6 +1,7 @@
 import './Button.scss';
 
 interface ButtonProps {
+  href: string,
   children: React.ReactNode;
 }
 
@@ -10,10 +11,10 @@ const tags = {
 }
 
 const Button = (props: ButtonProps) => {
-  const { children } = props;
+  const { href, children } = props;
   const { fragmentOpen, fragmentClose } = tags;
   return (
-    <a className='Button'>
+    <a href={href} target="_blank" className='Button'>
       <div className='content'>
         <div>{fragmentOpen}</div>
         <div className='text'>{children}</div>
