@@ -5,6 +5,10 @@
     padding-top: 5vh;
     display: flex;
     justify-content: space-between;
+
+    .MenuItem {
+        border: 1px solid $dark-grey;
+    }
     
     div {
         color: $white;
@@ -12,11 +16,20 @@
         letter-spacing: 1px;
         font-family: 'VarelaRound-Regular';
         display: flex;
-        justify-content: space-between;
         cursor: pointer;
+        padding: 3px;
+        box-sizing: border-box;
     }
 
     .Index {
         margin-right: 15px;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .Menu div {
+        padding: 6px;
     }
 }
