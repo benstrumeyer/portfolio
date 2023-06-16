@@ -17,12 +17,14 @@
 }
 
 .GreetingContainer {
+  height: 30vh;
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
+  margin-left: 13vw;
 
   .Greeting {
-    margin-left: 14vw;
+    margin: auto;
   }
 }
 
@@ -36,8 +38,7 @@
 }
 
 .Contact {
-  padding-top: 2vh;
-  height: 100vh;
+  padding-top: 3vh;
   width: 100%;
   text-align: center;
 
@@ -81,20 +82,26 @@
 }
 
 @media (min-width: 1200px) {
+  .App {
+    height: 188vh;
+  }
+
   .main {
     padding: 4vh 10vw;
   }
 
   .content {
-    height: 71vh;
+    height: 64vh;
     display: flex;
     justify-content: center;
     flex-direction: row;
   }
 
   .GreetingContainer {
+    display: block;
     width: 50%;
-    height: auto;
+    height: 229px;
+    margin-left: 0;
 
     .Greeting {
       margin: 0;
@@ -102,14 +109,14 @@
   }
 
   .Contact {
-    padding-top: 10vh;
+    padding-top: 14vh;
 
     .ButtonContainer {
 
-    flex-direction: row;
-    width: 90%;
-    margin: auto;
-    flex-shrink: 0;
+      flex-direction: row;
+      width: 90%;
+      margin: auto;
+      flex-shrink: 0;
     }
 
     .TitleContainer .Tag {
