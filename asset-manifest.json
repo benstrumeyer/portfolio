@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.286ce3df.css",
-    "main.js": "/portfolio/static/js/main.d8179849.js",
+    "main.css": "/portfolio/static/css/main.67cb87a0.css",
+    "main.js": "/portfolio/static/js/main.fd8c53c6.js",
     "static/media/VarelaRound-Regular.ttf": "/portfolio/static/media/VarelaRound-Regular.e67ccd4a92677fdf8719.ttf",
     "static/media/BebasNeue-Regular.ttf": "/portfolio/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "static/media/Orbitron-Regular.ttf": "/portfolio/static/media/Orbitron-Regular.1f498717ba081693370a.ttf",
     "static/media/Orbitron-Bold.ttf": "/portfolio/static/media/Orbitron-Bold.a0309d1fe75d16b6f13a.ttf",
     "index.html": "/portfolio/index.html",
-    "main.286ce3df.css.map": "/portfolio/static/css/main.286ce3df.css.map",
-    "main.d8179849.js.map": "/portfolio/static/js/main.d8179849.js.map"
+    "main.67cb87a0.css.map": "/portfolio/static/css/main.67cb87a0.css.map",
+    "main.fd8c53c6.js.map": "/portfolio/static/js/main.fd8c53c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.286ce3df.css",
-    "static/js/main.d8179849.js"
+    "static/css/main.67cb87a0.css",
+    "static/js/main.fd8c53c6.js"
   ]
 }
