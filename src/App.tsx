@@ -49,7 +49,7 @@ const App = () => {
     gsap.fromTo(
       arrowRef.current,
       { opacity: 0 },
-      { opacity: 1, delay: 1.8, duration: .85 }
+      { opacity: 1, delay: 1.83, duration: .85 }
     )
   }, [])
 
