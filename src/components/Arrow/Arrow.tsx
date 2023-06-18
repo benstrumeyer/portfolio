@@ -23,7 +23,7 @@ const Arrow = (props: ArrowProps) => {
     let timeoutId: NodeJS.Timeout | null = null;
     timeoutId = setTimeout(() => {
       lottieRef.current?.current?.play();
-    }, 850); // Delay in milliseconds
+    }, 1800); // Delay in milliseconds
 
     return () => {
       if (timeoutId) {

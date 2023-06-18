@@ -5,7 +5,7 @@
 .App {
   background-color: $grey;
   height: 191vh;
-  padding: 5vh 6vw;
+  padding: 5vh 14vw;
 }
 
 .Main {
@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   margin-left: 13vw;
+  z-index: 1;
 
   .Greeting {
     margin: auto;
@@ -48,6 +49,10 @@
     justify-content: center;
     font-family: 'Orbitron-Bold';
     letter-spacing: 1px;
+
+    * {
+      z-index: 1;
+    }
 
     .Tag {
       display: none;

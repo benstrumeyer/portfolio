@@ -5,9 +5,10 @@ import OrbitButtonComponent from './components/OrbitButtonComponent/OrbitButtonC
 import Button from './components/Button/Button';
 import { useIntersectionObserver } from './hooks/useIntersectionObserver';
 import Arrow from './components/Arrow/Arrow';
+import BackgroundAnimation from './components/BackgroundAnimation/BackgroundAnimation';
 
 import { useState, useRef, useEffect } from 'react';
-import gsap from 'gsap'; 
+import gsap from 'gsap';
 
 const tags = {
   h4Open: '<h4>',
@@ -46,12 +47,11 @@ const App = () => {
   }, []);
 
   // Button animation for arrow
-
   useEffect(() => {
     gsap.fromTo(
       arrowRef.current,
       { opacity: 0 },
-      { opacity: 1, delay: .85, duration: .85 }
+      { opacity: 1, delay: 1.8, duration: .85 }
     )
   }, [])
 
@@ -82,34 +82,33 @@ const App = () => {
 
   return (
     <div ref={homeRef} className='App'>
-      <div className='Main'>
-        <Menu homeRef={homeRef} contactRef={contactRef}></Menu>
-        <div className='content'>
-          <div className='GreetingContainer'>
-            <Greeting></Greeting>
-          </div>
-          <div ref={resumeRef}>
-            <OrbitButtonComponent></OrbitButtonComponent>
-          </div>
+      <BackgroundAnimation></BackgroundAnimation>
+      <Menu homeRef={homeRef} contactRef={contactRef}></Menu>
+      <div className='content'>
+        <div className='GreetingContainer'>
+          <Greeting></Greeting>
         </div>
-        <div ref={arrowRef}>
-          <Arrow contactRef={contactRef}></Arrow>
-        </div>
-        <div ref={contactRef} className='Contact'>
-          <div className='TitleContainer'>
-            <div className='Tag'>{h4Open}</div>
-            <div className='Title'>Connect with me</div>
-            <div className='Tag'>{h4Close}</div>
-          </div>
-          <div ref={buttonsRef} className='ButtonContainer'>
-            <Button href={`mailto:${email}`}>Email</Button>
-            <Button href={github}>Github</Button>
-            <Button href={linkedIn}>LinkedIn</Button>
-            <Button href={instagram}>Instagram</Button>
-          </div>
+        <div ref={resumeRef}>
+          <OrbitButtonComponent></OrbitButtonComponent>
         </div>
       </div>
-    </div>
+      <div ref={arrowRef}>
+        <Arrow contactRef={contactRef}></Arrow>
+      </div>
+      <div ref={contactRef} className='Contact'>
+        <div className='TitleContainer'>
+          <div className='Tag'>{h4Open}</div>
+          <div className='Title'>Connect with me</div>
+          <div className='Tag'>{h4Close}</div>
+        </div>
+        <div ref={buttonsRef} className='ButtonContainer'>
+          <Button href={`mailto:${email}`}>Email</Button>
+          <Button href={github}>Github</Button>
+          <Button href={linkedIn}>LinkedIn</Button>
+          <Button href={instagram}>Instagram</Button>
+        </div>
+      </div>
+    </div >
   );
 }
 
