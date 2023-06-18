@@ -56,27 +56,39 @@ const App = () => {
   // Contact section button animation
   useEffect(() => {
     if (isButtonsVisible && buttonsRef.current && !seenOnce) {
-      setSeenOnce(true);
       const buttons = buttonsRef.current.querySelectorAll('.Button');
       gsap.set(buttons, { scale: 0 });
 
-      const tl = gsap.timeline();
-
-      tl.to(buttons, {
-        scale: 1,
-        duration: 0.85,
-        onComplete: () => {
-          tl.to(buttons, {
-            scale: 0.95,
-            duration: .7,
-            repeat: -1,
-            yoyo: true
-          });
+      gsap.fromTo(
+        buttons,
+        { scale: 0 },
+        {
+          scale: 1,
+          duration: 1,
+          stagger: 0.1,
+          onComplete: () => {
+            gsap.to(buttons, {
+              scale: 0.95,
+              duration: 1.5,
+              repeat: -1,
+              yoyo: true,
+              stagger: {
+                each: .2,
+                from: 'random',
+              },
+            });
+          },
         }
-      });
-    }
+      );
 
+      setSeenOnce(true);
+    }
   }, [isButtonsVisible, seenOnce]);
+
+
+
+
+
 
   return (
     <div className='App'>

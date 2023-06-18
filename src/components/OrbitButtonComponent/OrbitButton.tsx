@@ -10,7 +10,7 @@ const OrbitButton = (props: ButtonProps) => {
 
   return (
     <a className='OrbitButton' href={`${process.env.PUBLIC_URL}/${pathToResume}`} target="_blank" rel="noopener noreferrer">
-      <span className='text'>{children}</span>
+      <div className='Text'>{children}</div>
       <span className="inner"></span>
     </a>
   );
