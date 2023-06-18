@@ -127,7 +127,7 @@ const Greeting = () => {
         <TypeAnimation
           sequence={[
             '',
-            1100,
+            1850,
             `${paragraphClose}`,
           ]}
           wrapper="span"

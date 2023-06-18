@@ -7,8 +7,9 @@
     justify-content: space-between;
 
     .MenuItem {
-        border: 1px solid $dark-grey;
+        border: 1px solid $green;
         z-index: 1;
+        border-radius: 2px;
     }
     
     div {
@@ -20,10 +21,6 @@
         cursor: pointer;
         padding: 3px;
         box-sizing: border-box;
-    }
-
-    .Index {
-        margin-right: 15px;
     }
 }
 

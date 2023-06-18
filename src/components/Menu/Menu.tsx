@@ -84,20 +84,19 @@ const Menu = (props: MenuProps) => {
 
   return (
     <div className='Menu'>
-      {menu.map((item, index) => (
+      {/* {menu.map((item, index) => (
         <div
           onMouseEnter={() => animateOnHover(index)}
-          onMouseLeave={() => resetAnimation(index)}
+          // onMouseLeave={() => resetAnimation(index)}
           ref={(el) => (menuItemsRef.current[index] = el)}
           onClick={() => scrollToRef(item.ref)}
           className="MenuItem">
           <div className="Content">
-            <div className='Index'>//0{index}.</div>
             <div className="Title">{item.title}</div>
           </div>
         </div>
       )
-      )}
+      )} */}
     </div>
   );
 }
