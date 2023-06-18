@@ -4,8 +4,7 @@
 
 .App {
   background-color: $grey;
-  height: 191vh;
-  padding: 5vh 14vw;
+  padding: 0 14vw;
 }
 
 .Main {
@@ -17,11 +16,10 @@
 }
 
 .GreetingContainer {
-  height: 30vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-left: 13vw;
+  margin-left: 2vw;
+  width: 308px;
+  height: 245px;
+  display: block;
   z-index: 1;
 
   .Greeting {
@@ -29,17 +27,20 @@
   }
 }
 
-.content {
-  height: 71vh;
+.OrbitButtonContainer {
+  margin-top: 8vh;
+}
+
+.Content {
+  margin-top: 14vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  margin: 1vh;
 }
 
 .Contact {
-  padding-top: 3vh;
+  margin-top: 12vh;
   width: 100%;
   text-align: center;
 
@@ -78,27 +79,25 @@
   }
 
   .ButtonContainer {
+    margin-bottom: 3vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 70vh;
+    height: 76vh;
   }
 }
 
 @media (min-width: 1200px) {
-  .App {
-    height: 188vh;
-  }
-
   .main {
     padding: 4vh 10vw;
   }
 
-  .content {
-    height: 64vh;
+  .Content {
+    margin: 26vh auto 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
   }
 
@@ -117,15 +116,18 @@
     padding-top: 14vh;
 
     .ButtonContainer {
-
       flex-direction: row;
       width: 90%;
       margin: auto;
       flex-shrink: 0;
+      height: 69vh;
     }
 
-    .TitleContainer .Tag {
-      display: block;
+    .TitleContainer {
+      margin: 0 0 6vh 0;
+      .Tag {
+        display: block;
+      }
     }
   }
 }

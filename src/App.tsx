@@ -1,5 +1,4 @@
 import './App.scss';
-import Menu from './components/Menu/Menu';
 import Greeting from './components/Greeting/Greeting';
 import OrbitButtonComponent from './components/OrbitButtonComponent/OrbitButtonComponent';
 import Button from './components/Button/Button';
@@ -35,7 +34,6 @@ const App = () => {
   const resumeRef = useRef<HTMLDivElement | null>(null)!;
   const arrowRef = useRef<HTMLDivElement | null>(null)!;
   const contactRef = useRef<HTMLDivElement | null>(null)!;
-  const homeRef = useRef<HTMLDivElement | null>(null)!;
 
   // Button animation for Download CV
   useEffect(() => {
@@ -81,14 +79,13 @@ const App = () => {
   }, [isButtonsVisible, seenOnce]);
 
   return (
-    <div ref={homeRef} className='App'>
+    <div className='App'>
       <BackgroundAnimation></BackgroundAnimation>
-      <Menu homeRef={homeRef} contactRef={contactRef}></Menu>
-      <div className='content'>
+      <div className='Content'>
         <div className='GreetingContainer'>
           <Greeting></Greeting>
         </div>
-        <div ref={resumeRef}>
+        <div className='OrbitButtonContainer' ref={resumeRef}>
           <OrbitButtonComponent></OrbitButtonComponent>
         </div>
       </div>
