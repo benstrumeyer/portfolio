@@ -94,7 +94,7 @@ const ParticleContainer = () => {
           },
           detectRetina: true,
           background: {
-            color: "#12101B",
+            color: "#0d0d0d",
             image: "",
             position: "50% 50%",
             repeat: "no-repeat",
