@@ -36,8 +36,7 @@ The build files will be generated in the build directory.
 ### License
 This project is licensed under the MIT License.
 
-Thank you for checking out my space-themed personal portfolio! If you have any questions or feedback, feel free to reach out to me.
-
+### Links
 Email: ben.strumeyer@gmail.com
 
 GitHub: https://github.com/benstrumeyer
