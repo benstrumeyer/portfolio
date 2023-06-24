@@ -20,7 +20,6 @@ Before running the project, please ensure that you have the following software i
 `cd personal-portfolio`
 
 3. Install the dependencies:
-
 `npm install`
 
 ### Usage
@@ -34,15 +33,15 @@ To build the project for production, use the following command:
 `npm run build`
 The build files will be generated in the build directory.
 
-### Contributing
-If you would like to contribute to this project, feel free to fork the repository and submit a pull request with your changes.
-
 ### License
 This project is licensed under the MIT License.
 
 Thank you for checking out my space-themed personal portfolio! If you have any questions or feedback, feel free to reach out to me.
 
 Email: ben.strumeyer@gmail.com
+
 GitHub: github.com/benstrumeyer
+
 LinkedIn: https://www.linkedin.com/in/ben-strumeyer-8aa897113/
+
 Instagram: https://www.instagram.com/ben_strumeyer/
