@@ -40,7 +40,7 @@ Thank you for checking out my space-themed personal portfolio! If you have any q
 
 Email: ben.strumeyer@gmail.com
 
-GitHub: github.com/benstrumeyer
+GitHub: https://github.com/benstrumeyer
 
 LinkedIn: https://www.linkedin.com/in/ben-strumeyer-8aa897113/
 
