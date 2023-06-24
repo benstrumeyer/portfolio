@@ -1,5 +1,5 @@
 ## Space-themed Personal Portfolio
-Welcome to my space-themed personal portfolio! This project showcases my skills, projects, and provides links to my resume, email, GitHub, LinkedIn, and Instagram. It is built using React and TypeScript.
+Welcome to my space-themed personal portfolio! This project showcases a few animations and provides links to my resume, email, GitHub, LinkedIn, and Instagram. It is built using React and TypeScript.
 
 ### Features
 - Space-themed design
