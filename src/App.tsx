@@ -101,8 +101,8 @@ const App = () => {
           <OrbitButtonComponent></OrbitButtonComponent>
         </div>
       </div>
-      <div ref={arrowRef}>
-        <Arrow contactRef={contactRef}></Arrow>
+      <div ref={arrowRef} style={{marginTop: '100vh'}}>
+        {/* <Arrow contactRef={contactRef}></Arrow> */}
       </div>
       <div ref={contactRef} className='Contact'>
         <div className='TitleContainer'>

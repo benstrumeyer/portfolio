@@ -3,7 +3,7 @@ import './OrbitButtonComponent.scss';
 
 import { RefObject } from 'react';
 const tags = {
-  callToAction: '<Download CV/>',
+  callToAction: 'Doxy.me ❤️',
 }
 
 const OrbitButtonComponent = () => {
