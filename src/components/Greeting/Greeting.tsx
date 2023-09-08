@@ -6,7 +6,7 @@ const greeting = {
   hello: 'This is',
   firstName: 'Ben',
   lastName: 'Strumeyer',
-  title: 'Creative Developer',
+  title: 'Web Engineer at Doxy.me',
 }
 
 const tags = {
